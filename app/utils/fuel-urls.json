@@ -1,0 +1,9 @@
+{
+  "bio-petrol": {
+    "url": "http://ec2-3-22-240-207.us-east-2.compute.amazonaws.com/guiasaldos/main/donde/",
+    "diesel": "132",
+    "premium": "133",
+    "especial": "134"
+  },
+  "genex": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1"
+}
