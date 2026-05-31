@@ -15,10 +15,10 @@ import { haversineDistance } from "~/utils/distance"
 import { evStationsBolivia } from "~/utils/evStationsBolivia"
 import { genexStationsStatic } from "~/utils/genexStationsStatic"
 import { bioPetrolStationsStatic } from "~/utils/bioPetrolStationsStatic"
-import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTrigger } from "~/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "~/components/ui/dialog"
 import { Button } from "~/components/ui/button"
-import { MenuIcon, XIcon } from "lucide-react"
-import Ads from "~/components/ads"
+import { MenuIcon } from "lucide-react"
+import { AdBanner, configureAds } from "@adsterra-ad/react"
 
 const FUEL_TABS: { value: FuelPreference; label: string }[] = [
   { value: "ESPECIAL", label: "Especial" },
@@ -27,6 +27,10 @@ const FUEL_TABS: { value: FuelPreference; label: string }[] = [
   { value: "GAS", label: "🔵 Gas" },
   { value: "ELECTRICO", label: "⚡ EV" },
 ]
+
+configureAds({
+  "320x50": "dcf183e15f08737fff98d0038d901adf"
+})
 
 // Tipos de combustible que BioPetrol soporta
 const BIOPETROL_FUELS: FuelPreference[] = ["ESPECIAL", "PREMIUM", "DIESEL"]
@@ -345,21 +349,10 @@ export default function Home() {
                   </p>
                 )}
               </div>
-              <Ads
-                scriptCode={`
-            <script>
-  atOptions = {
-    'key' : 'dcf183e15f08737fff98d0038d901adf',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/dcf183e15f08737fff98d0038d901adf/invoke.js"></script>
-            `}
-                height={50}
-                width={320}
+
+              <AdBanner
+                format="320x50"
+                adLabel="Ads"
               />
 
             </DialogHeader>
