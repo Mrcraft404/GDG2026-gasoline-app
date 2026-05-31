@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root"
 import "./app.css"
 import AppLayout from "./components/layout/app-layout"
+import Ads from "./components/ads"
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -23,6 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Ads />
         <ScrollRestoration />
         <Scripts />
       </body>
