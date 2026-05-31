@@ -1,3 +1,4 @@
+import { AdSlot } from "adkit-react"
 import BioPetrolList from "~/components/bio-petrol/biopetrol-list"
 import { useConfig, type FuelPreference } from "~/context/configCtx"
 
@@ -18,6 +19,7 @@ export default function BioPetrolPage() {
           Mostrando: {FUEL_LABELS[config.fuelPreference]} · cambia el tipo en la página principal
         </p>
       </div>
+      <AdSlot theme="light" slot="fuel-bol-banner" aspectRatio="banner" price={300} />
       <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <BioPetrolList />
       </div>

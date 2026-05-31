@@ -7,6 +7,7 @@ import { haversineDistance } from "~/utils/distance"
 import { useUserLocation } from "~/context/locationCtx"
 import { useEvData } from "~/context/evCtx"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~/components/ui/select"
+import { AdSlot } from "adkit-react"
 
 function LazyEVMap({
   stations,
@@ -190,6 +191,8 @@ export default function EVChargingPage() {
             Desconocido
           </span>
         </div>
+
+        <AdSlot theme="light" slot="fuel-bol-banner" aspectRatio="banner" price={300} />
 
         <div className="flex-1 overflow-y-auto p-3 space-y-3">
           {filtered.length === 0 ? (

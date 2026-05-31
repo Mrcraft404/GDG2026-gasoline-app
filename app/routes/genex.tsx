@@ -1,4 +1,4 @@
-import FakeAd from "~/components/fake-ads"
+import { AdSlot } from "adkit-react"
 import GenexList from "~/components/genex/genex-list"
 import { useConfig } from "~/context/configCtx"
 
@@ -12,7 +12,7 @@ export default function GenexPage() {
           Resaltando: {config.fuelPreference} · toca una estación para ver todos sus combustibles
         </p>
       </div>
-      <FakeAd />
+      <AdSlot theme="light" slot="fuel-bol-banner" aspectRatio="banner" price={300} />
       <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <GenexList />
       </div>
